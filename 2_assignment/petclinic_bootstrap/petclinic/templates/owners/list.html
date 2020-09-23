@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block title %} All Owners {% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <h3> Owners </h3>
+    <div class="container">
+    {% if all_owners %}
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>City</th>
+                    <th>Telephone</th>
+                    <th>Pets</th>
+                </tr>
+            </thead>
+        {% for owner in all_owners %}
+        <tr>
+            <td><a href="{{ owner.id }}">{{ owner.first_name }} {{ owner.last_name }}</a></td>
+            <td>{{ owner.address }}</td>
+            <td>{{ owner.city }}</td>
+            <td>{{ owner.telephone }}</td>
+            <td>
+                {% for pet in owner.pet_set.all %}
+                {{ pet.name }}
+                {% endfor %}
+            </td>
+        </tr>
+        {% endfor %}
+        
+        </table>
+    </div>
+</div>
+    {% else %}
+        <p>There are currently no owners to display</p>
+    {% endif %}
+    {% endblock %}

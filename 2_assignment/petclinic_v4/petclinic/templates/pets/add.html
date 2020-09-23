@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title%} New Pet {% endblock %}
+
+{% block content %}
+<h1> New Pet </h1>
+<form method="POST">
+  {% csrf_token %}  
+  <table>
+      <tr>
+          <td>
+              <label for="owner_id">Owner</label><br />
+          </td>
+          <td> {{ form.owner_id }} </td>
+      </tr>
+      <tr>
+          <td>
+              <label for="name">Name</label><br />
+          </td>
+          <td> {{ form.name }} </td>
+      </tr>
+      <tr>
+          <td>
+            <label for="birthday">Birthday</label><br />
+          </td>
+          <td> {{ form.birthday }} </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="pettype"> PetType </label><br />
+        </td>
+        <td> {{ form.pettype }} </td>
+      </tr>
+      <tr>
+          <td><p class="submit"><input type="submit" value="Add Pet" name=""></p></td>
+      </tr>
+  </table>
+</form>
+{% endblock %}

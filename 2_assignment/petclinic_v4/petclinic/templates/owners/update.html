@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block title%} Owner {% endblock %}
+
+{% block content %}
+<h1> Owner </h1>
+<form action="/petclinic/owners/update/{{ owner.id }}/" method="POST">
+  {% csrf_token %}  
+  <table>
+      <tr>
+          <td>
+              <label for="first_name">First Name</label><br />
+          </td>
+          <td> 
+            <input type="text" name="first_name" value="{{ owner.first_name }}" />  
+          </td>
+      </tr>
+      <tr>
+          <td>
+              <label for="last_name">Last Name</label><br />
+          </td>
+          <td>
+            <input type="text" name="last_name" value="{{ owner.last_name }}" />  
+          </td>
+      </tr>
+      <tr>
+          <td>
+            <label for="address"> Address </label><br />
+          </td>
+          <td>
+            <input type="text" name="address" value="{{ owner.address }}" />  
+          </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="city"> City </label><br />
+        </td>
+        <td>
+          <input type="text" name="city" value="{{ owner.city }}" />  
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="telephone"> Telephone </label><br />
+        </td>
+        <td>
+          <input type="text" name="telephone" value="{{ owner.telephone }}" />  
+        </td>
+      </tr>
+      <tr>
+          <td><p class="submit"><input type="submit" value="Update Owner" name=""></p></td>
+      </tr>
+  </table>
+</form>
+{% endblock %}

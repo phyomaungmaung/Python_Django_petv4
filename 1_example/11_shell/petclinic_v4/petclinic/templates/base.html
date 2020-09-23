@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Django Petclinic | {% block title %}{% endblock %}</title>
+        
+        <link href="{{ STATIC_ROOT }}/static/petclinic.css" 
+        rel="stylesheet" type="text/css"/>
+    
+    </head>
+
+    <body>
+        {% include 'header.html' %}
+        <div id="main">
+            {% block content %}{% endblock %}
+        </div>
+        {% include 'footer.html' %}
+    </body>
+</html>

@@ -1,0 +1,13 @@
+Edit
+
+myapp     > models.py
+djangoapp > settings.py > INSTALLED_APPS (register myapp)
+
+-------------------------------
+
+python manage.py makemigrations myapp
+python manage.py migrate
+
+-------------------------------
+
+phpmyadmin > myapp_employee (search)

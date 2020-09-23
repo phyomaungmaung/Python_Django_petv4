@@ -1,0 +1,9 @@
+from petclinic.models import PetType
+
+PetType.objects.filter(id=1).update(name='Cat')
+
+OR
+
+pettype_obj = PetType.objects.get(id=1)
+pettype_obj.name = 'CAT'
+pettype_obj.save()

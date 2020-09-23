@@ -1,0 +1,11 @@
+from petclinic.models import PetType
+
+pettype = PetType.objects.get(id=1)
+pettype.name
+
+OR
+
+pettype = PetType.objects.filter(name='Cat')
+pettype[1]
+
+PetType.objects.all()

@@ -1,0 +1,36 @@
+(1) Create New Folder 
+
+    myapp > templates
+
+(2) Register templates Folder
+
+    djangoapp > djangoapp > settings.py > TEMPLATES > DIRS
+
+    [os.path.join(BASE_DIR,'templates')]
+
+===================
+
+(1) templates > 1_index_template.html
+
+(2) template loading
+
+    myapp > views_template.py
+
+(3) * urls.py register
+
+    path('template/', views_template.index)
+
+===================
+
+variable   - {{ }} 
+
+tags       - {%  %}
+  
+{% csrf_token %} - Cross Site Request Forgeries
+{% block %}      - can be overridden by child templates
+{% extends %}    - template extends a parent template
+{% include %}    - including other templates within a template
+
+{% for %} {% endfor %} - looping
+
+{% if %} {% endif %}   - condition

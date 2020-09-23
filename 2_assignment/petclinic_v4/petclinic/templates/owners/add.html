@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block title%} Owner {% endblock %}
+
+{% block content %}
+<h1> Owner </h1>
+<form method="POST">
+  {% csrf_token %}
+  <table>
+      <tr>
+          <td>
+              <label for="first_name">First Name</label><br />
+          </td>
+          <td> {{ form.first_name }} </td>
+      </tr>
+      <tr>
+          <td>
+              <label for="last_name">Last name</label><br />
+          </td>
+          <td> {{ form.last_name }} </td>
+      </tr>
+      <tr>
+          <td>
+            <label for="address"> Address</label><br />
+          </td>
+          <td> {{ form.address }} </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="city"> City</label><br />
+        </td>
+        <td> {{ form.city }} </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="telephone"> Telephone</label><br />
+        </td>
+        <td> {{ form.telephone }} </td>
+      </tr>
+      <tr>
+          <td><p class="submit"><input type="submit" value="Add Owner" name=""></p></td>
+      </tr>
+  </table>
+</form>
+{% endblock %}

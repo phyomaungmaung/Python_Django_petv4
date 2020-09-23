@@ -1,0 +1,5 @@
+{% csrf_token %}
+
+{% for pet in pet_list %}
+    <li> {{ pet }} </li>
+{% endfor %}

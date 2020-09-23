@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Index</title>
+    </head>
+    <body>
+        <form method="POST" action="/save_html/">
+            {% csrf_token %}
+                <label>First Name</label>
+                <input type='text' name='first_name' required/> 
+                <br/> <br/>
+                <label>Last Name</label>
+                <input type='text' name='last_name' required/> 
+                <br/> <br/>
+            <button type="submit">Save</button>
+        </form>
+    </body>
+</html>

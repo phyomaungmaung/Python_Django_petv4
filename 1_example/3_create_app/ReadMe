@@ -1,0 +1,11 @@
+python manage.py startapp myapp
+
+-------------------------------
+Edit
+
+myapp     > views.py
+djangoapp > urls.py
+
+-------------------------------
+
+http://localhost:8000/hello/

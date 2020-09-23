@@ -1,0 +1,62 @@
+install mysqlclient?
+
+python3 -m pip install pymysql
+
+---------------------------
+# wamp server 2.5 vs django 3.0
+
+python3 -m pip uninstall django
+python3 -m pip install Django==2.0
+
+---------------------------
+
+Edit Two File ->
+
+(1) djangoapp > djangoapp > __init__.py
+
+import pymysql
+
+pymysql.install_as_MySQLdb()
+
+(2) djangoapp > djangoapp > settings.py > DATABAES
+
+'default': {
+        'ENGINE'  : 'django.db.backends.mysql',
+        'NAME'    : 'djangoapp',
+        'USER'    : 'root',
+        'PASSWORD': '',
+        'HOST'    : 'localhost',
+        'PORT'    : '3306',
+    }
+
+---------------------------
+
+# database manual create
+
+phpmyadmin -> create new database name is [djangoapp]
+
+---------------------------
+
+djangoapp > 
+
+python manage.py makemigrations (django.sessions)
+
+python manage.py migrate
+
+python manage.py makemigrations petclinic (petclinic.owner)
+
+python manage.py migrate
+
+---------------------------
+
+python manage.py createsuperuser
+
+admin
+admin@gmail.com
+superuser
+superuser
+---------------------------
+
+localhost:8000/admin
+
+---------------------------

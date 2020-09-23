@@ -1,0 +1,22 @@
+(1) Create Project
+
+    > python -m django startproject petclinic_v4 (project name)
+
+(2) Create App
+
+    > python manage.py startapp petclinic (app name)
+
+(3) Database Connect
+
+    __init__.py -> import pymysql ...
+    settings.py -> DATABASES (register defaults)
+    settings.py -> INSTALLED_APPS (register petclinic)
+
+    phpmyadmin  -> create new database (petclinic_db)
+
+    > python manage.py makemigrations petclinic
+    > python manage.py migrate
+
+(4) Admin User Create
+
+    > python manage.py createsuperuser

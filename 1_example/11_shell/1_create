@@ -1,0 +1,9 @@
+from petclinic.models import PetType
+
+pettype = PetType.objects.create(name='Dog')
+
+OR
+
+pettype = PetType(name='Mouse')
+
+pettype.save(force_insert=True)
